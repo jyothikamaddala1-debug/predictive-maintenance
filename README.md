@@ -126,3 +126,29 @@ Example response:
 }
 
 The API also validates the machine type and rejects invalid values.
+
+### Sample Prediction
+
+Example input for a normal operating condition:
+
+```json
+{
+  "machine_type": "L",
+  "air_temperature": 301,
+  "process_temperature": 311,
+  "rotational_speed": 1400,
+  "torque": 60,
+  "tool_wear": 200
+}
+```
+
+Example output:
+
+```json
+{
+  "prediction": 1,
+  "result": "Machine Failure Predicted"
+}
+```
+
+The API returns `1` when a machine failure is predicted and `0` when no machine failure is predicted.
