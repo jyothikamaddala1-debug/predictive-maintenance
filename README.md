@@ -62,6 +62,33 @@ Gradient Boosting achieved the best overall performance with:
 
 Gradient Boosting was selected as the final model for deployment.
 
+## Project Structure
+
+```text
+predictive-maintenance/
+├── data/
+│   └── ai4i2020.csv
+├── model/
+│   ├── gradient_boosting_model.pkl
+│   └── type_encoder.pkl
+├── notebooks/
+│   └── predictive_maintenance.ipynb
+├── api/
+│   └── main.py
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
+### Key Components
+
+- `data/` – Dataset used for model training
+- `notebooks/` – Data analysis, preprocessing, model training and evaluation
+- `model/` – Saved trained model and encoder
+- `api/` – FastAPI application for predictions
+- `requirements.txt` – Python dependencies
+- `.gitignore` – Files excluded from Git tracking
+
 ## FastAPI Deployment
 
 The trained Gradient Boosting model is deployed using FastAPI.
